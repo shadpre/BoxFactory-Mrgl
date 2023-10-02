@@ -1,3 +1,4 @@
+using BoxFactory_Mrgl.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BoxFactory_Mrgl.Controllers
@@ -27,7 +28,8 @@ namespace BoxFactory_Mrgl.Controllers
                 TemperatureC = Random.Shared.Next(-20, 55),
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
-            .ToArray();
+            .ToArray();           
+            
         }
     }
 }
