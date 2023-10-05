@@ -1,3 +1,5 @@
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,6 +10,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var frontendPath = "./../frontend/www/";
 builder.Services.AddSpaStaticFiles(conf => conf.RoorPath = frontendPath);
+//builder.Services.AddSingleton<DatabaseConnector, DatabaseConnector>();
+
 
 var app = builder.Build();
 
