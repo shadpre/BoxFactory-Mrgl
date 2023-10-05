@@ -24,3 +24,12 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+:root {
+  /**
+   * Setting the variables for DEMO purposes only.
+   * Values will be set automatically when building an iOS or Android app.
+   */
+  --ion-safe-area-top: 20px;
+  --ion-safe-area-bottom: 20px;
+}
