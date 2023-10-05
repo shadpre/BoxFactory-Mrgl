@@ -55,6 +55,17 @@ namespace BoxFactory_Mrgl.Controllers
             return Ok(box);
         }
 
+        [HttpGet]
+        [Route("api/box/search")]
+        public IActionResult Search(
+            [FromQuery] decimal volumenMin = 0, 
+            [FromQuery] decimal volumenMax = decimal.MaxValue, 
+            [FromQuery] decimal minPrice = 0, 
+            [FromQuery] decimal maxPrice = decimal.MaxValue)
+        {
+            throw new NotImplementedException();
+        }
+
         [HttpPut]
         [Route("/api/box")]
         public IActionResult Put([FromBody]BoxModel box)
