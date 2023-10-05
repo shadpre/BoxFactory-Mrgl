@@ -28,7 +28,7 @@ namespace BoxFactory_Mrgl.Controllers
         public IActionResult Post([FromBody] BoxModel box)
         {
             BoxModel newBox =
-            boxDAO.Create(box.Length, box.Width, box.Height, box.Price);
+            boxDAO.Create(box.Length, box.Width, box.Height, box.Price, box.Description);
 
             if (newBox == null) { return BadRequest(); }
             return Created("", newBox);
@@ -61,7 +61,8 @@ namespace BoxFactory_Mrgl.Controllers
             [FromQuery] decimal volumenMin = 0, 
             [FromQuery] decimal volumenMax = decimal.MaxValue, 
             [FromQuery] decimal minPrice = 0, 
-            [FromQuery] decimal maxPrice = decimal.MaxValue)
+            [FromQuery] decimal maxPrice = decimal.MaxValue,
+            [FromQuery] string description = "")
         {
             throw new NotImplementedException();
         }
@@ -71,8 +72,7 @@ namespace BoxFactory_Mrgl.Controllers
         public IActionResult Put([FromBody]BoxModel box)
         {
             BoxModel newbox;
-            newbox = boxDAO.Update(box.BoxId, box.Length, box.Width, box.Height, box.Price);
-
+            newbox = boxDAO.Update(box.BoxId, box.Length, box.Width, box.Height, box.Price, box.Description);
             if (newbox == null) { return NotFound("Box Not Found"); }
             return Ok(newbox);
         }

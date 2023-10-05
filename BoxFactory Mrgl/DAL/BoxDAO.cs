@@ -9,18 +9,18 @@ namespace BoxFactory_Mrgl.DAL
     {
         string connectionstring = DBConfig.GetInstance().ConnectionString;
 
-        public BoxModel Create(decimal length, decimal width, decimal height, decimal price)
+        public BoxModel Create(decimal length, decimal width, decimal height, decimal price, string description)
         {
             int newID;
             using (var connection = new SqlConnection(connectionstring))
             {
                 var sql = $@"
-                INSERT INTO Box (Length, Width, Height, Price) 
+                INSERT INTO Box (Length, Width, Height, Price, Description) 
                 OUTPUT INSERTED.BoxID
-                VALUES (@length, @width, @height, @price)
+                VALUES (@length, @width, @height, @price, @description)
                 ";
 
-                newID = connection.QuerySingle<int>(sql, new { length, width, height, price });
+                newID = connection.QuerySingle<int>(sql, new { length, width, height, price, description });
             }
 
             return Read(newID);
@@ -36,7 +36,8 @@ namespace BoxFactory_Mrgl.DAL
                 Length as {nameof(BoxModel.Length)},
                 Height as {nameof(BoxModel.Height)},
                 Width as {nameof(BoxModel.Width)},
-                Price as {nameof(BoxModel.Price)}
+                Price as {nameof(BoxModel.Price)},
+                Description as {nameof(BoxModel.Description)}
                 FROM Box
                 Where BoxId = @Boxid";
                 try
@@ -59,7 +60,8 @@ namespace BoxFactory_Mrgl.DAL
                 Length as {nameof(BoxModel.Length)},
                 Height as {nameof(BoxModel.Height)},
                 Width as {nameof(BoxModel.Width)},
-                Price as {nameof(BoxModel.Price)}
+                Price as {nameof(BoxModel.Price)},
+                Description as {nameof(BoxModel.Description)}
                 FROM Box";
                 try
                 {
@@ -74,7 +76,7 @@ namespace BoxFactory_Mrgl.DAL
             }
         }
 
-        public BoxModel Update(int id, decimal length, decimal width, decimal height, decimal price)
+        public BoxModel Update(int id, decimal length, decimal width, decimal height, decimal price, string description)
         {
             using (var connection = new SqlConnection(connectionstring))
             {
@@ -84,10 +86,11 @@ namespace BoxFactory_Mrgl.DAL
                 Length = @length,
                 Width = @width,
                 Height = @height,
-                Price = @price
+                Price = @price,
+                Description = @description
                 WHERE BoxId = @id
                 ";
-                var rowsEffected = connection.Execute(sql, new { length, width, height, price, id });
+                var rowsEffected = connection.Execute(sql, new { length, width, height, price, id, description });
 
                 if (rowsEffected == 0)
                 {

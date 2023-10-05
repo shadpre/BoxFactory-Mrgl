@@ -31,6 +31,12 @@ namespace BoxFactory_Mrgl.Models
         [DataMember(Name = "price")]
         public decimal Price { get; set; }
         /// <summary>
+        /// Description of the box
+        /// </summary>
+        [DataMember(Name = "description")]
+        public string Description { get; set; }
+
+        /// <summary>
         /// Volumen in mm2
         /// </summary>        
         ///         
