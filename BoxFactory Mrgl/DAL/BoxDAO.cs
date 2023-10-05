@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System.Data;
+using System.Data.SqlClient;
 using BoxFactory_Mrgl.Models;
 using Dapper;
 
@@ -60,7 +61,16 @@ namespace BoxFactory_Mrgl.DAL
                 Width as {nameof(BoxModel.Width)},
                 Price as {nameof(BoxModel.Price)}
                 FROM Box";
-                return connection.Query<BoxModel>(sql).ToList();
+                try
+                {
+                    return connection.Query<BoxModel>(sql).ToList();
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                catch (Exception ex) { throw ex; }
+                return new List<BoxModel>();
             }
         }
 
