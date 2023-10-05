@@ -1,41 +1,4 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      <div style="display: flex; justify-content: flex-end; align-items: center;">
-        <img src="assets/icon/BoxFactory_logo.png" alt="box_logo" height="50" width="50">
-        <div class="header-title" style="margin-right: 1350px">
-          Box-Factory
-        </div>
-        <ion-searchbar style="width: 200px"></ion-searchbar>
-      </div>
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-nav-bar> </app-nav-bar>
 
+<app-box-factory> </app-box-factory>
 
-
-
-<ion-content [fullscreen]="true">
-
-  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-    <ion-fab-button>
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-
-  <ion-list class="card-container">
-    <ion-card *ngFor="let box of state.boxes" class="custom-card">
-      <ion-card-title>{{box.boxName}}</ion-card-title>
-      <ion-card-subtitle>This a box, What did you expect?</ion-card-subtitle>
-
-      <ion-card-content>
-        Good for putting all your shit in
-      </ion-card-content>
-
-      <ion-button fill="clear">Action 1</ion-button>
-      <ion-button fill="clear">Action 2</ion-button>
-
-    </ion-card>
-  </ion-list>
-
-</ion-content>

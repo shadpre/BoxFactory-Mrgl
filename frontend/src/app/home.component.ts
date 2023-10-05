@@ -17,11 +17,8 @@ export class HomeComponent implements OnInit{
 
   async fetchBoxes() {
 
-    const result = await firstValueFrom(this.http.get<ResponseDto<Box[]>>(environment.baseUrl + '/'))
-    this.state.boxes = result.responseData!;
   }
 
   ngOnInit(): void {
-    this.fetchBoxes()
   }
 }
