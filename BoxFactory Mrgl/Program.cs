@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var frontendPath = "./../frontend/www/";
-builder.Services.AddSpaStaticFiles(conf => conf.RoorPath = frontendPath);
+builder.Services.AddSpaStaticFiles(conf => conf.RootPath = frontendPath);
 //builder.Services.AddSingleton<DatabaseConnector, DatabaseConnector>();
 
 
@@ -23,10 +23,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseSpaStaticFiles();
-app.UseSpaStaticFiles(conf =>
-{
-    conf.Options.SourcePath = frontendPath;
-});
+// app.UseSpaStaticFiles(conf=> 
+// {
+//    conf.Options.SourcePath = frontendPath;
+// });
 
 app.UseAuthorization();
 
