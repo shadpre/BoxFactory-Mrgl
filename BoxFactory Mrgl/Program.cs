@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var frontendPath = "./../frontend/www/";
-builder.Services.AddSpaStaticFiles(conf => conf.RoorPath = frontendPath);
+builder.Services.AddSpaStaticFiles(conf => conf.RootPath = frontendPath);
 //builder.Services.AddSingleton<DatabaseConnector, DatabaseConnector>();
 
 
