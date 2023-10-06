@@ -1,18 +1,44 @@
-ion-fab {
-  margin-top: var(--ion-safe-area-top, 0);
-  margin-bottom: var(--ion-safe-area-bottom, 0);
-}
-
 /* Define the container styles */
-.card-container {
+.ion-content-center {
   display: flex;
+  flex-direction: column;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   height: 100vh; /* 100% of viewport height for vertical centering */
+
 }
 
 /* Define the card styles */
-.custom-card {
+.card-container {
   width: 40%; /* Limit the card width to 40% of the container */
+  min-width: 500px;
+  margin-bottom: 80px;
   /* Add any other card-specific styles here */
 }
+/* Container styles to make elements stand next to each other */
+.button-container {
+  display: flex;
+  align-items: center; /* Center vertically within the container */
+  gap: 10px; /* Add 10px spacing between elements */
+}
+
+/* Custom styles for the button */
+.custom-button {
+  font-weight: bold;
+  font-size: 16px;
+  color: #007bff; /* Change the color to your preference */
+  text-transform: uppercase;
+}
+
+/* Custom styles for the input */
+.custom-input {
+  width: 80px; /* Set the width to 80px */
+  margin: 0; /* Remove margin to prevent extra spacing */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #333; /* Change the color to your preference */
+}
+
+

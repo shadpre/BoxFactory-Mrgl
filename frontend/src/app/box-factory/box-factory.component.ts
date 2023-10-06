@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment';
   templateUrl: 'box-factory.component.html',
   styleUrls: ['box-factory.component.scss'],
 })
+
 export class BoxFactoryComponent  implements OnInit {
   constructor(public http: HttpClient, public state: State) {}
 
