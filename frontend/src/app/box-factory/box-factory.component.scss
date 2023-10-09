@@ -34,7 +34,9 @@ ion-card {
   top: 50%;
   right: 20px; /* Adjust the right margin as needed */
   transform: translateY(-50%);
+  z-index: 1;
 }
+
 
 /* Container styles for card content */
 .card-content-container {
@@ -53,7 +55,14 @@ ion-card {
 .custom-button {
   font-weight: bold;
   font-size: 16px;
-  color: #007bff; /* Change the color to your preference */
+  color: mediumseagreen;
+  text-transform: uppercase;
+}
+
+.custom-button:hover {
+  font-weight: bold;
+  font-size: 16px;
+  color: red;
   text-transform: uppercase;
 }
 
@@ -65,5 +74,6 @@ ion-card {
   border-radius: 5px;
   padding: 5px 10px;
   font-size: 14px;
+  text-align: center;
   color: #333; /* Change the color to your preference */
 }
