@@ -32,12 +32,12 @@ namespace BoxFactory_Mrgl.DAL
             {
                 var sql = $@"
                 SELECT 
-                BoxId as {nameof(BoxModel.BoxId)},
-                Length as {nameof(BoxModel.Length)},
-                Height as {nameof(BoxModel.Height)},
-                Width as {nameof(BoxModel.Width)},
-                Price as {nameof(BoxModel.Price)},
-                Description as {nameof(BoxModel.Description)}
+                [BoxId] as {nameof(BoxModel.BoxId)},
+                [Length] as {nameof(BoxModel.Length)},
+                [Height] as {nameof(BoxModel.Height)},
+                [Width] as {nameof(BoxModel.Width)},
+                [Price] as {nameof(BoxModel.Price)},
+                [Description] as {nameof(BoxModel.Description)}
                 FROM Box
                 Where BoxId = @Boxid";
                 try

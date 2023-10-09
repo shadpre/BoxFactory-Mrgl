@@ -19,6 +19,7 @@ using BoxFactory_Mrgl.DAL;
 namespace BoxFactory_Mrgl.Controllers
 {
     [ApiController]
+    
     public class BoxController : ControllerBase
     {
         BoxDAO boxDAO = new BoxDAO();

@@ -23,7 +23,7 @@ namespace BoxFactory_Mrgl.DAL
             return instance;
         }
 
-        public static IConfigurationRoot GetConfiguration()
+        private static IConfigurationRoot GetConfiguration()
         {
             var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
             return builder.Build();
