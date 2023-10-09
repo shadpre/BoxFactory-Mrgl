@@ -26,6 +26,5 @@ namespace BoxFactory_Mrgl.Controllers
         {
             return Ok(_dbFacade.ReadCustomers());
         }
-
     }
 }

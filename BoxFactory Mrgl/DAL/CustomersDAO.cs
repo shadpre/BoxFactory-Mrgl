@@ -14,7 +14,7 @@ namespace BoxFactory_Mrgl.DAL
         private string connectionstring = DBConfig.GetInstance().ConnectionString;
         public ICustomerModel create(ICustomerModel imodel)
         {
-            CustomerModel model = (CustomerModel)imodel;
+            //CustomerModel model = (CustomerModel)imodel;
             int Id = 0;
             using (var connection = new SqlConnection(connectionstring))
             {
@@ -23,7 +23,7 @@ namespace BoxFactory_Mrgl.DAL
                 OUTPUT INSERTED.CustomerId
                 VALUES (@name, @phone)
                 ";
-                Id = connection.QuerySingle<int>(sql, new { model.Name, model.Phone });
+                Id = connection.QuerySingle<int>(sql, new { imodel.Name, imodel.Phone });
             }
             try
             {
