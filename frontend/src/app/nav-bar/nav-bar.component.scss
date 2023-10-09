@@ -1,18 +1,57 @@
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
 .header-title {
   font-weight: normal;
   font-family: "Gill Sans MT";
   font-size: 26px;
   margin-left: 10px;
-  margin-bottom: 15px;
-
+  margin-bottom: 0;
 }
+
+.header-img {
+  margin-bottom: 0;
+}
+
 ion-toolbar {
   --min-height: 60px;
-  --padding-top: 10px;
-  --padding-bottom: 10px;
+  --padding-top: 5px;
+  --padding-bottom: 5px;
 }
-ion-searchbar {
-  --padding-top: 10px;
-  --padding-bottom: 10px;
-  --max-width: 60%;
+
+.search-bar-menu {
+  display: flex;
+  align-items: center; /* Vertically center the search bar and menu icon */
+  position: relative; /* Add position relative to establish a stacking context */
+}
+
+.search-bar {
+  padding-top: 10px;
+  margin-left: auto; /* Push the search bar to the right by utilizing auto margin */
+  height: 50px;
+  min-width: 200px;
+  max-width: 40%;
+  position: relative; /* Add position relative */
+  z-index: 2; /* Set a higher z-index to ensure it appears above the ion-toolbar */
+}
+
+.menu-icon {
+  margin-right: 80px;
+  margin-bottom: 0; /* Adjust margin-bottom to remove extra spacing */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  transition: color 0.3s; /* Add a smooth color transition on hover */
+  position: relative; /* Add position relative */
+  z-index: 2; /* Set a higher z-index to ensure it appears above the ion-toolbar */
+}
+
+.menu-icon:hover {
+  color: red; /* Change the color on hover (customize as needed) */
 }

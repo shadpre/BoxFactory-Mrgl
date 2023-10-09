@@ -1,27 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div style="display: flex; align-items: center;">
-          <img src="assets/icon/BoxFactory_logo.png" alt="box_logo" height="50" width="50" style="margin-bottom: 10px">
+    <ion-title class="header-content">
+        <div class="header-left">
+          <img class="header-img" src="assets/icon/BoxFactory_logo.png" alt="box_logo" height="50" width="50">
           <div class="header-title">
             Box-Factory
           </div>
         </div>
-        <div style="display: flex; justify-content: center; align-items: center;">
-        <ion-searchbar style="width: 250px"></ion-searchbar>
-          <ion-icon name="menu" size="large" style="margin-bottom: 15px" (click)="toggleMenu()"></ion-icon>
-        </div>
-      </div>
     </ion-title>
+          <div class="search-bar-menu">
+            <ion-searchbar class="search-bar" placeholder="Search"></ion-searchbar>
+            <ion-icon name="menu" size="large" class="menu-icon" (click)="toggleMenu()"></ion-icon>
+          </div>
   </ion-toolbar>
 </ion-header>
 
 <div *ngIf="isMenuOpen" class="menu-content">
-    <ion-item (click)="menuItemClicked('Item 1')">(Indtil vi finder ud af hvad der skal være her så der ikke noget)</ion-item>
-    <ion-item (click)="menuItemClicked('Item 2')">Det her er også en placeholder</ion-item>
+  <ion-item (click)="menuItemClicked('Item 1')">(Placeholder for Menu Item 1)</ion-item>
+  <ion-item (click)="menuItemClicked('Item 2')">(Placeholder for Menu Item 2)</ion-item>
 </div>
-
-
-
-
