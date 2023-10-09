@@ -1,15 +1,16 @@
-<ion-content class="ion-content-center">
+<ion-content>
+  <!-- Add an overlay to darken the background -->
+  <div class="card-overlay"></div>
 
   <ion-list class="card-container">
-    <ion-card *ngFor="let box of state.boxes" >
+    <ion-card *ngFor="let box of state.boxes">
       <ion-card-header>
         <ion-card-title>{{ box.boxName }}</ion-card-title>
         <ion-card-subtitle>{{ box.description }}</ion-card-subtitle>
       </ion-card-header>
-
-      <ion-card-content>
+      <ion-img src="assets/cardboard-box-image.png" alt="Cardboard Box" class="cardboard-box-image"></ion-img>
+      <ion-card-content class="card-content">
         <p>Length: {{ box.length }} mm - Width: {{ box.width }} mm - Height: {{ box.height }} mm</p>
-        <p></p>
         <p>Price: {{ box.price }} kr.</p>
         <p>In storage: {{ box.amount }}</p>
       </ion-card-content>
@@ -17,11 +18,8 @@
       <div class="button-container">
         <ion-button fill="clear" class="custom-button">Add to Storage</ion-button>
         <ion-input fill="clear" class="custom-input" placeholder="Amount" inputmode="numeric" pattern="[0-9]*"></ion-input>
-        <ion-button fill="clear">Action 2</ion-button>
+        <ion-button fill="clear" class="custom-button">Add to cart</ion-button>
       </div>
-
-
     </ion-card>
   </ion-list>
-
 </ion-content>
