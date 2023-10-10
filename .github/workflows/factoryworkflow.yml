@@ -30,7 +30,7 @@ jobs:
           chmod +x ./wait-for-it.sh
           dotnet run --project=../api/ & 
           API_PID=!
-          ./wait-for-it.sh -t 60 localhost:5000 -- && sh ./run-all-api-tests.sh
+          ./wait-for-it.sh -t 60 localhost:4100 -- && sh ./run-all-api-tests.sh
           kill $API_PID
         env:
           myDb1: ${{secrets.MYDB1}}
