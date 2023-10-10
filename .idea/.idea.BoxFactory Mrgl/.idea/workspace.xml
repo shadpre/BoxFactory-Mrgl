@@ -9,6 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49215697-8cd5-4fbd-bb0f-cb8b11b5032e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BoxFactory Mrgl/shell-scripts/run-all-api-tests.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BoxFactory Mrgl/shell-scripts/wait-for-it.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BoxFactory Mrgl/tests/api/box.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/factoryworkflow.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/factoryworkflow.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BoxFactory Mrgl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BoxFactory Mrgl/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -37,29 +40,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "JSM-autotests",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\mail\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\mail\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\mail\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\mail\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\mail\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\mail\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.BoxFactory Mrgl: http">
     <configuration name="BoxFactory Mrgl: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/BoxFactory Mrgl/BoxFactory Mrgl.csproj" />
@@ -104,6 +107,8 @@
       <workItem from="1696401215624" duration="2091000" />
       <workItem from="1696413160152" duration="64000" />
       <workItem from="1696413286747" duration="1106000" />
+      <workItem from="1696786618405" duration="93000" />
+      <workItem from="1696786791316" duration="9570000" />
     </task>
     <task id="LOCAL-00001" summary="added yml shell">
       <option name="closed" value="true" />
