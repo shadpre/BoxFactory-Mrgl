@@ -52,7 +52,7 @@ namespace BoxFactory_Mrgl.DAL
 
                 try
                 {
-                    var output = connection.Query<CustomerModel>(sql).ToList();
+                    var output = connection.Query<CustomerModel>(sql).ToList();                    
                     result.AddRange(output);
                 }
                 catch (SqlException ex)
