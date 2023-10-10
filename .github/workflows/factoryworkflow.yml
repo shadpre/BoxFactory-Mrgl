@@ -26,6 +26,7 @@ jobs:
       - run: npm install -g newman
       - name: Setup API and run the tests
         run: |
+          cd api
           cd shell-scripts
           chmod +x ./wait-for-it.sh
           dotnet run --project=../api/ & 
