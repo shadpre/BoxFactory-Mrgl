@@ -17,6 +17,17 @@
   margin-bottom: 0;
 }
 
+.menu-content{
+  z-index: 2;
+  width: 300px;
+  position: absolute;
+  top: 60px; /* Position it right below the menu icon */
+  right: 15px; /* Position it on the right side of the page */
+  max-width: 25%;
+  min-width: 150px;
+  text-align: center;
+}
+
 .header-img {
   margin-bottom: 0;
 }
@@ -38,7 +49,7 @@ ion-toolbar {
   margin-left: auto; /* Push the search bar to the right by utilizing auto margin */
   height: 50px;
   min-width: 200px;
-  max-width: 40%;
+  max-width: 20%;
   position: relative; /* Add position relative */
   z-index: 2; /* Set a higher z-index to ensure it appears above the ion-toolbar */
 }
@@ -50,6 +61,13 @@ ion-toolbar {
   transition: color 0.3s; /* Add a smooth color transition on hover */
   position: relative; /* Add position relative */
   z-index: 2; /* Set a higher z-index to ensure it appears above the ion-toolbar */
+}
+
+
+.menu-content ion-item:hover{
+  cursor: pointer;
+  color: mediumseagreen;
+  font-weight: bold;
 }
 
 .menu-icon:hover {

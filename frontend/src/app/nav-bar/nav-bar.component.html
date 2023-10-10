@@ -16,6 +16,10 @@
 </ion-header>
 
 <div *ngIf="isMenuOpen" class="menu-content">
-  <ion-item (click)="menuItemClicked('Item 1')">(Placeholder for Menu Item 1)</ion-item>
-  <ion-item (click)="menuItemClicked('Item 2')">(Placeholder for Menu Item 2)</ion-item>
+  <ion-item  (click)="menuItemClicked('Item 1')">(Vis Logo)</ion-item>
+  <ion-item  (click)="menuItemClicked('Item 2')">(Gem Logo)</ion-item>
+</div>
+
+<div *ngIf="!isContentHidden">
+  <img src="assets/icon/BoxFactory_logo.png">
 </div>

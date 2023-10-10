@@ -6,12 +6,33 @@ import {Box, ResponseDto } from 'src/models';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-box-factory',
-  templateUrl: 'box-factory.component.html',
-  styleUrls: ['box-factory.component.scss'],
+  selector: 'app-card',
+  templateUrl: 'card.component.html',
+  styleUrls: ['card.component.scss'],
 })
 
-export class BoxFactoryComponent  implements OnInit {
+export class CardComponent implements OnInit {
+  isAlertOpen = false;
+  public alertButtons = ['Yes', 'No'];
+
+  // ...
+
+  handleAlertDismiss(result: any) {
+    // Handle the alert dismissal here
+    if (result.role === 'Yes') {
+      // User clicked 'Yes'
+      // Perform your delete action or any other action
+    } else {
+      // Close the alert
+      this.isAlertOpen = false;
+    }
+  }
+
+  // Call this method to open the alert
+  openAlert() {
+    this.isAlertOpen = true;
+  }
+
   constructor(public http: HttpClient, public state: State) {}
 
   async fetchBoxes() {
@@ -23,5 +44,6 @@ export class BoxFactoryComponent  implements OnInit {
   ngOnInit(): void {
     this.fetchBoxes()
   }
+
 
 }

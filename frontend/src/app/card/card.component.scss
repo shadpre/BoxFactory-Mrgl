@@ -32,7 +32,7 @@ ion-card {
   max-width: 200px; /* Adjust the maximum width as needed */
   position: absolute;
   top: 50%;
-  right: 20px; /* Adjust the right margin as needed */
+  right: 40px; /* Adjust the right margin as needed */
   transform: translateY(-50%);
   z-index: 1;
 }
@@ -76,4 +76,22 @@ ion-card {
   font-size: 14px;
   text-align: center;
   color: #333; /* Change the color to your preference */
+}
+
+ion-fab {
+  margin-top: var(--ion-safe-area-top, 0);
+  margin-bottom: var(--ion-safe-area-bottom, 0);
+}
+
+.trash {
+  position: absolute;
+  top: 10%;
+  right: 20px; /* Adjust the right margin as needed */
+  transform: translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.trash:hover {
+  color: red;
 }
