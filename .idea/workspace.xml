@@ -5,25 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="236e1403-5798-49e3-9c4b-0f506efb44a4" name="Changes" comment="Quick fix">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BoxFactory-Mrgl.dir/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BoxFactory-Mrgl.dir/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BoxFactory-Mrgl.dir/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/boxModel/box.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/boxModel/box.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/boxModel/box.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/api/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/box-factory/box-factory.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/card/card.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/box-factory/box-factory.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/card/card.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/box-factory/box-factory.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/card/card.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/box-factory/box-factory.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/card/card.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/card/card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/card/card.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/card/card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/card/card.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/nav-bar/nav-bar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/nav-bar/nav-bar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/nav-bar/nav-bar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/nav-bar/nav-bar.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/nav-bar/nav-bar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/nav-bar/nav-bar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="SCSS File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,21 +48,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/olive/Documents/GitHub/Box_Factory/BoxFactory-Mrgl/frontend/src/app&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\olive\\Documents\\GitHub\\Box_Factory\\BoxFactory-Mrgl\\frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/olive/Documents/GitHub/Box_Factory/BoxFactory-Mrgl/frontend/src/app",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\ager6\\Documents\\GitHub\\BoxFactory-Mrgl\\frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\olive\Documents\GitHub\Box_Factory\BoxFactory-Mrgl\frontend\src\app" />
@@ -71,6 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696921534085</updated>
       <workItem from="1696921535957" duration="7690000" />
+      <workItem from="1696971078379" duration="7346000" />
     </task>
     <servers />
   </component>

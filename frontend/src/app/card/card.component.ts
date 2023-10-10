@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {firstValueFrom} from "rxjs";
 import { State } from 'src/state';
 import {Box, ResponseDto } from 'src/models';
 import { environment } from 'src/environments/environment';
+import {ModalController, ToastController} from "@ionic/angular";
+import {CreateBoxComponent} from "../boxModel/box.component";
 
 @Component({
   selector: 'app-card',
@@ -12,32 +14,16 @@ import { environment } from 'src/environments/environment';
 })
 
 export class CardComponent implements OnInit {
-  isAlertOpen = false;
-  public alertButtons = ['Yes', 'No'];
 
-  // ...
+  constructor(public http: HttpClient,public modalController: ModalController,
+              public state: State, public toastController: ToastController) {
 
-  handleAlertDismiss(result: any) {
-    // Handle the alert dismissal here
-    if (result.role === 'Yes') {
-      // User clicked 'Yes'
-      // Perform your delete action or any other action
-    } else {
-      // Close the alert
-      this.isAlertOpen = false;
-    }
   }
 
-  // Call this method to open the alert
-  openAlert() {
-    this.isAlertOpen = true;
-  }
-
-  constructor(public http: HttpClient, public state: State) {}
 
   async fetchBoxes() {
 
-    const result = await firstValueFrom(this.http.get<ResponseDto<Box[]>>(environment.baseUrl + '/'))
+    const result = await firstValueFrom(this.http.get<ResponseDto<Box[]>>(environment.baseUrl + '/api/box'))
     this.state.boxes = result.responseData!;
   }
 
@@ -46,4 +32,34 @@ export class CardComponent implements OnInit {
   }
 
 
+  async deleteBox(boxId: number | undefined) {
+    try {
+      await firstValueFrom(this.http.delete(environment.baseUrl + '/api/box/'+boxId))
+      this.state.boxes = this.state.boxes.filter(b => b.boxId != boxId)
+      const toast = await this.toastController.create({
+        message: 'the box was successfully deleted',
+        duration: 1233,
+        color: "success"
+      })
+      toast.present();
+    } catch (e) {
+      console.log(e);
+      if(e instanceof HttpErrorResponse) {
+        const toast = await this.toastController.create({
+          message: e.error.messageToClient,
+          duration: 1233,
+          color: "danger"
+        });
+        toast.present();
+      }
+    }
+
+  }
+
+  async openModal() {
+    const modal = await this.modalController.create({
+      component: CreateBoxComponent
+    });
+    modal.present();
+  }
 }

@@ -7,14 +7,7 @@
       <ion-card-header>
         <ion-card-title>{{ box.boxName }}</ion-card-title>
       </ion-card-header>
-      <ion-icon class="trash" name="trash-outline" size="medium" (click)="openAlert()"></ion-icon>
-      <ion-alert
-        [isOpen]="isAlertOpen"
-        header="Alert"
-        message="Are you sure you want to delete?"
-        [buttons]="alertButtons"
-        (didDismiss)="handleAlertDismiss($event)"
-      ></ion-alert>
+      <ion-icon class="trash" name="trash-outline" size="medium" (click)="deleteBox(box.boxId)"></ion-icon>
       <ion-img src="assets/cardboard-box-image.png" alt="Cardboard Box" class="cardboard-box-image"></ion-img>
       <ion-card-content class="card-content" >
         <ion-card-subtitle>{{ box.description }}</ion-card-subtitle>
@@ -32,7 +25,7 @@
   </ion-list>
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="start">
-    <ion-fab-button id="popover-button">
+    <ion-fab-button (click)="openModal()">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>

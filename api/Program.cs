@@ -23,10 +23,12 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseSpaStaticFiles();
-// app.UseSpaStaticFiles(conf=> 
-// {
-//    conf.Options.SourcePath = frontendPath;
-// });
+/*
+app.UseSpaStaticFiles(conf=>
+ {
+    conf.Options.SourcePath = frontendPath;
+});
+*/
 
 app.UseAuthorization();
 
