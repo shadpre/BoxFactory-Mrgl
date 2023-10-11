@@ -31,3 +31,8 @@ public class Tests : PageTest
         await Expect(Page).ToHaveURLAsync(new Regex(".*intro"));
     }
 }
+
+/*
+ dotnet tool install --global Microsoft.Playwright.CLI
+playwright install
+*/
