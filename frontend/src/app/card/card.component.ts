@@ -23,8 +23,8 @@ export class CardComponent implements OnInit {
 
   async fetchBoxes() {
 
-    const result = await firstValueFrom(this.http.get<ResponseDto<Box[]>>(environment.baseUrl + '/api/box'))
-    this.state.boxes = result.responseData!;
+    const result = await firstValueFrom(this.http.get<Box[]>(environment.baseUrl + '/api/box'))
+    this.state.boxes = result!;
   }
 
   ngOnInit(): void {

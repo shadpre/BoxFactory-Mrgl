@@ -30,6 +30,19 @@ app.UseSpaStaticFiles(conf=>
 });
 */
 
+app.UseCors(options =>
+
+{
+
+   options.SetIsOriginAllowed(origin => true)
+
+       .AllowAnyMethod()
+
+       .AllowAnyHeader()
+
+       .AllowCredentials();
+
+});
 app.UseAuthorization();
 
 app.MapControllers();

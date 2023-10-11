@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="236e1403-5798-49e3-9c4b-0f506efb44a4" name="Changes" comment="Quick fix">
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/boxModel/box.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/boxModel/box.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/boxModel/box.component.ts" afterDir="false" />
+    <list default="true" id="236e1403-5798-49e3-9c4b-0f506efb44a4" name="Changes" comment="http">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BoxFactory Mrgl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BoxFactory Mrgl/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoxFactory Mrgl.sln" beforeDir="false" afterPath="$PROJECT_DIR$/BoxFactory Mrgl.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/card/card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/card/card.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/card/card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/card/card.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.prod.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/state.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/state.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,23 +43,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/olive/Documents/GitHub/Box_Factory/BoxFactory-Mrgl/frontend/src/app",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\ager6\\Documents\\GitHub\\BoxFactory-Mrgl\\frontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/olive/Documents/GitHub/Box_Factory/BoxFactory-Mrgl/frontend/src/app&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\ager6\\Documents\\GitHub\\BoxFactory-Mrgl\\frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\olive\Documents\GitHub\Box_Factory\BoxFactory-Mrgl\frontend\src\app" />
@@ -79,11 +74,25 @@
       <option name="presentableId" value="Default" />
       <updated>1696921534085</updated>
       <workItem from="1696921535957" duration="7690000" />
-      <workItem from="1696971078379" duration="7346000" />
+      <workItem from="1696971078379" duration="7559000" />
+      <workItem from="1697006540614" duration="3802000" />
     </task>
+    <task id="LOCAL-00001" summary="http">
+      <option name="closed" value="true" />
+      <created>1696979724036</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696979724036</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="http" />
+    <option name="LAST_COMMIT_MESSAGE" value="http" />
   </component>
 </project>
