@@ -15,8 +15,8 @@ import {firstValueFrom} from "rxjs";
 export class CreateBoxComponent {
 
   createNewBoxForm = this.fb.group({
-    boxName: ['', Validators.minLength(4)],
-    description: ['', Validators.maxLength(500)],
+    boxName: ['', [Validators.minLength(4), Validators.required]],
+    description: ['', [Validators.maxLength(500), Validators.required]],
     length: ['', Validators.required],
     width: ['', Validators.required],
     height: ['', Validators.required],
