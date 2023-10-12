@@ -11,8 +11,6 @@ namespace PlaywrightTests;
 
 public class Tests : PageTest
 {
-	
-	const video = await page.video.startRecording();
   
 	[Test, Order(1)]
     public async Task pwCreateBox()
@@ -75,7 +73,6 @@ public class Tests : PageTest
 
     }
     
-    await video.stop();
     
 
  /*   [Test]
