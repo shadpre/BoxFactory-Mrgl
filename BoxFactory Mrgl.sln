@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34004.107
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxFactory Mrgl", "BoxFactory Mrgl\BoxFactory Mrgl.csproj", "{4F41E495-BC11-4A9D-8A0D-E6ABCFE42870}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxFactory Mrgl", "api\BoxFactory Mrgl.csproj", "{E3225869-D6D6-4792-910A-AF7075F347DA}"
 EndProject
 Global
