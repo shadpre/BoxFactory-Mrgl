@@ -8,6 +8,8 @@
         <ion-card-title>{{ box.boxName }}</ion-card-title>
       </ion-card-header>
       <ion-icon class="trash" name="trash-outline" size="medium" (click)="deleteBox(box.boxId)"></ion-icon>
+      <ion-icon class="pan" name="pencil-outline" size="medium" (click)="openUpdateModal(box)"></ion-icon>
+
       <ion-img src="assets/cardboard-box-image.png" alt="Cardboard Box" class="cardboard-box-image"></ion-img>
       <ion-card-content class="card-content" >
         <ion-card-subtitle>{{ box.description }}</ion-card-subtitle>
@@ -18,14 +20,14 @@
 
       <div class="button-container">
         <ion-button fill="clear" class="custom-button">Add to Storage</ion-button>
-        <ion-input fill="clear" class="custom-input" placeholder="Amount" inputmode="numeric" pattern="[0-9]*"></ion-input>
+        <ion-input type="number" fill="clear" class="custom-input" placeholder="Amount"></ion-input>
         <ion-button fill="clear" class="custom-button">Add to cart</ion-button>
       </div>
     </ion-card>
   </ion-list>
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="start">
-    <ion-fab-button (click)="openModal()">
+    <ion-fab-button (click)="openCreateModal()">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>

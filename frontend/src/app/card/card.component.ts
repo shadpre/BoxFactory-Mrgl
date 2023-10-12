@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit } from '@angular/core';
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {firstValueFrom} from "rxjs";
 import { State } from 'src/state';
-import {Box, ResponseDto } from 'src/models';
+import {Box} from 'src/models';
 import { environment } from 'src/environments/environment';
 import {ModalController, ToastController} from "@ionic/angular";
-import {CreateBoxComponent} from "../boxModel/box.component";
+import {UpdateBoxComponent} from "../boxUpdate/boxUpdate.component";
+import {CreateBoxComponent} from "../boxCreate/boxCreate.component";
 
 @Component({
   selector: 'app-card',
@@ -14,6 +15,7 @@ import {CreateBoxComponent} from "../boxModel/box.component";
 })
 
 export class CardComponent implements OnInit {
+
 
   constructor(public http: HttpClient,public modalController: ModalController,
               public state: State, public toastController: ToastController) {
@@ -34,7 +36,7 @@ export class CardComponent implements OnInit {
 
   async deleteBox(boxId: number | undefined) {
     try {
-      await firstValueFrom(this.http.delete(environment.baseUrl + '/api/box/'+boxId))
+      await firstValueFrom(this.http.delete(environment.baseUrl + '/api/box/'+ boxId))
       this.state.boxes = this.state.boxes.filter(b => b.boxId != boxId)
       const toast = await this.toastController.create({
         message: 'the box was successfully deleted',
@@ -56,10 +58,21 @@ export class CardComponent implements OnInit {
 
   }
 
-  async openModal() {
+  async openCreateModal() {
     const modal = await this.modalController.create({
       component: CreateBoxComponent
     });
-    modal.present();
+    await modal.present();
+  }
+
+  async openUpdateModal(box: Box) {
+    this.state.editBox = box;
+    const modal = await this.modalController.create({
+      component: UpdateBoxComponent,
+      componentProps: {
+
+      },
+    });
+    await modal.present();
   }
 }

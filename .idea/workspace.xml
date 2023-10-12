@@ -4,10 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="236e1403-5798-49e3-9c4b-0f506efb44a4" name="Changes" comment="api på fro">
+    <list default="true" id="236e1403-5798-49e3-9c4b-0f506efb44a4" name="Changes" comment="create">
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/boxUpdate/boxUpdate.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/boxUpdate/boxUpdate.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/boxUpdate/boxUpdate.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BoxFactory Mrgl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BoxFactory Mrgl/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/boxModel/box.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/boxModel/box.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/boxModel/box.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/boxCreate/boxCreate.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/boxModel/box.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/boxCreate/boxCreate.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/boxModel/box.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/boxCreate/boxCreate.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/card/card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/card/card.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/card/card.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/card/card.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/card/card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/card/card.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/nav-bar/nav-bar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/nav-bar/nav-bar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/nav-bar/nav-bar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/nav-bar/nav-bar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/state.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/state.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +60,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/olive/Documents/GitHub/Box_Factory/BoxFactory-Mrgl/frontend/src/app&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ager6/Documents/GitHub/BoxFactory-Mrgl/frontend/src/app&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -72,7 +85,8 @@
       <updated>1696921534085</updated>
       <workItem from="1696921535957" duration="7690000" />
       <workItem from="1696971078379" duration="7559000" />
-      <workItem from="1697006540614" duration="6324000" />
+      <workItem from="1697006540614" duration="20243000" />
+      <workItem from="1697095331346" duration="7226000" />
     </task>
     <task id="LOCAL-00001" summary="http">
       <option name="closed" value="true" />
@@ -90,7 +104,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697019208382</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="create">
+      <option name="closed" value="true" />
+      <created>1697022286764</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697022286764</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +121,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="http" />
     <MESSAGE value="api på fro" />
-    <option name="LAST_COMMIT_MESSAGE" value="api på fro" />
+    <MESSAGE value="create" />
+    <option name="LAST_COMMIT_MESSAGE" value="create" />
   </component>
 </project>

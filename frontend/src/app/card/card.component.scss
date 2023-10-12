@@ -32,7 +32,7 @@ ion-card {
   max-width: 200px; /* Adjust the maximum width as needed */
   position: absolute;
   top: 50%;
-  right: 40px; /* Adjust the right margin as needed */
+  right: 35px; /* Adjust the right margin as needed */
   transform: translateY(-50%);
   z-index: 1;
 }
@@ -86,10 +86,21 @@ ion-fab {
 .trash {
   position: absolute;
   top: 10%;
-  right: 20px; /* Adjust the right margin as needed */
+  right: 15px; /* Adjust the right margin as needed */
   transform: translateY(-50%);
   z-index: 1;
   cursor: pointer;
+}
+.pan {
+  position: absolute;
+  top: 20%;
+  right: 15px; /* Adjust the right margin as needed */
+  transform: translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
+}
+.pan:hover {
+  color: red;
 }
 
 .trash:hover {

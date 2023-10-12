@@ -8,19 +8,19 @@ import {environment} from "../../environments/environment";
 import {firstValueFrom} from "rxjs";
 
 @Component({
-  selector: 'app-box-model',
-  templateUrl: 'box.component.html',
-  styleUrls: ['box.component.scss'],
+  selector: 'app-box-Create',
+  templateUrl: 'boxCreate.component.html',
+  styleUrls: ['boxCreate.component.scss'],
 })
 export class CreateBoxComponent {
 
   createNewBoxForm = this.fb.group({
     boxName: ['', [Validators.minLength(4), Validators.required]],
     description: ['', [Validators.maxLength(500), Validators.required]],
-    length: ['', Validators.required],
-    width: ['', Validators.required],
-    height: ['', Validators.required],
-    price: ['', Validators.required]
+    length: [0, Validators.required],
+    width: [0, Validators.required],
+    height: [0, Validators.required],
+    price: [0, Validators.required]
   })
 
   constructor(public fb: FormBuilder, public modalController: ModalController, public http: HttpClient, public state: State, public toastController: ToastController) {

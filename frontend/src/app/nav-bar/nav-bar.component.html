@@ -9,7 +9,7 @@
         </div>
     </ion-title>
           <div class="search-bar-menu">
-            <ion-searchbar class="search-bar" placeholder="Search"></ion-searchbar>
+            <ion-searchbar [(ngModel)]="searchQuery" (ionChange)="onSearch()" (keyup.enter)="onSearch()" class="search-bar" placeholder="Search"></ion-searchbar>
             <ion-icon name="menu" size="large" class="menu-icon" (click)="toggleMenu()"></ion-icon>
           </div>
   </ion-toolbar>
