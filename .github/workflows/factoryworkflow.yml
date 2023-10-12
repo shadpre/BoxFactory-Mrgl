@@ -1,50 +1,39 @@
-# BoxFactory workflow
-
-name: BoxFactoryWorkflow
-
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  
-  # Allows you to run this workflow manually from the Actions tab
+    branches:
+      - main
+      - master
   workflow_dispatch:
-
-
 jobs:
-  build:
+  playwrighttests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '8'
-      - uses: actions/setup-node@v1
+          dotnet-version: 8.0.x
+      - uses: actions/setup-node@v3
         with:
-          node-version: '18'
-      - run: npm install -g newman
-      - name: Setup API and run the tests
-        run: |
-          cd api
-          cd shell-scripts
-          chmod +x ./wait-for-it.sh
-          dotnet run --project=../api/ & 
-          API_PID=!
-          ./wait-for-it.sh -t 60 localhost:4100 -- && sh ./run-all-api-tests.sh
-          kill $API_PID
+          node-version: 18.x.x
+
+      - name: Install Angular program dependencies, Angular global CLI + ng build
+        run: cd frontend && npm i -g @angular/cli && npm i && ng build -c="development"
+
+      - name: Build test code and install playwright test browser
+        run: cd PlaywrightTests && dotnet build && pwsh bin/Debug/net8.0/playwright.ps1 install --with-deps
+
+      - name: Build and run Web API + getting process ID for shutting down later
+        run: cd api && dotnet run & echo "API_PID=$!" >> $GITHUB_ENV
         env:
           myDb1: ${{secrets.MYDB1}}
+
+      - name: Run tests once API is running (sleep interval set to 60 seconds)
+        run: cd PlaywrightTests && sleep 60 && dotnet test
+        env:
+          myDb1: ${{secrets.MYDB1}}
+
+      - name: Shutdown Web API once the tests are done running
+        run: kill $API_PID
           
           
-      
-      
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-      
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+
