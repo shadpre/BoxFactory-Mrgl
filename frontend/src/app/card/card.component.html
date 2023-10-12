@@ -7,7 +7,7 @@
       <ion-card-header>
         <ion-card-title>{{ box.boxName }}</ion-card-title>
       </ion-card-header>
-      <ion-icon class="trash" name="trash-outline" size="medium" (click)="deleteBox(box.boxId)"></ion-icon>
+      <ion-icon data-testid="boxDeleter" class="trash" name="trash-outline" size="medium" (click)="deleteBox(box.boxId)"></ion-icon>
       <ion-img src="assets/cardboard-box-image.png" alt="Cardboard Box" class="cardboard-box-image"></ion-img>
       <ion-card-content class="card-content" >
         <ion-card-subtitle>{{ box.description }}</ion-card-subtitle>

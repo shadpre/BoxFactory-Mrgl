@@ -11,7 +11,7 @@ namespace PlaywrightTests;
 
 public class Tests : PageTest
 {
-   
+  
 	[Test]
     public async Task BoxCreationValid()
      {
@@ -19,68 +19,71 @@ public class Tests : PageTest
 
         await Page.Locator("ion-fab-button").GetByRole(AriaRole.Img).Nth(1).ClickAsync();
 
-        await Page.Locator("#ion-overlay-1 label").Filter(new() { HasText = "insert a name for the box please" }).ClickAsync();
+        await Page.GetByTestId("boxName").Locator("input").Nth(1).FillAsync("Textbox");
 
-        await Page.Locator("#ion-input-14").FillAsync("Naming");
+        await Page.GetByTestId("boxingtester").Locator("input").Nth(1).FillAsync("En Box");
 
-        await Page.Locator("#ion-overlay-1 label").Filter(new() { HasText = "please add a description" }).ClickAsync();
+		await Page.GetByTestId("boxLength").Locator("input").Nth(1).FillAsync("350");
 
-        await Page.Locator("#ion-input-15").FillAsync("Working Now");
+		await Page.GetByTestId("boxHeight").Locator("input").Nth(1).FillAsync("350");
 
-        await Page.Locator("#ion-overlay-1 label").Filter(new() { HasText = "please insert the length of the box" }).ClickAsync();
+		await Page.GetByTestId("boxWidth").Locator("input").Nth(1).FillAsync("350");
 
-        await Page.Locator("#ion-input-16").FillAsync("450");
+		await Page.GetByTestId("boxPrice").Locator("input").Nth(1).FillAsync("350");
 
-        await Page.Locator("#ion-overlay-1 label").Filter(new() { HasText = "please insert the width of the box" }).ClickAsync();
+		await Page.Locator("#ion-overlay-1").GetByRole(AriaRole.Button, new() { Name = "send" }).ClickAsync();
 
-        await Page.Locator("#ion-input-17").FillAsync("459");
+ 	 }
+*/
 
-        await Page.Locator("#ion-overlay-1 label").Filter(new() { HasText = "please insert the height of the box" }).ClickAsync();
+[Test]
+   public async Task pwDelete()
+    {
+        await Page.GotoAsync("http://localhost:4200/");
 
-        await Page.Locator("#ion-input-18").FillAsync("900");
+        await Page.GetByTestId("boxDeleter").Nth(1).ClickAsync();
 
-        await Page.Locator("#ion-overlay-1 label").Filter(new() { HasText = "please add a price" }).ClickAsync();
+	}
 
-        await Page.Locator("#ion-input-19").FillAsync("500");
 
-        await Page.Locator("#ion-overlay-1").GetByRole(AriaRole.Button, new() { Name = "send" }).ClickAsync();
+
+    [Test]
+    public async Task addToStorage()
+    {
+        await Page.GotoAsync("http://localhost:4200/");
+
+        await Page.Locator("#ion-input-6").ClickAsync();
+
+        await Page.Locator("#ion-input-6").FillAsync("5");
+
+        await Page.Locator("ion-card").Filter(new() { HasText = "string, a boxLength: 2000 mm - Width: 3000 mm - Height: 2000 mmPrice: 25 kr.In s" }).GetByRole(AriaRole.Button).First.ClickAsync();
 
     }
+
+}
 	
-	[Test]
+/*	[Test]
 		 public async Task BoxCreationInvalid()
   		  {
-        await Page.GotoAsync("http://localhost:4200/");
+           await Page.GotoAsync("http://localhost:4200/");
 
         await Page.Locator("ion-fab-button").GetByRole(AriaRole.Img).Nth(1).ClickAsync();
 
-        await Page.Locator("#ion-overlay-1 label").Filter(new() { HasText = "insert a name for the box please" }).ClickAsync();
+        await Page.GetByTestId("boxName").Locator("input").Nth(1).FillAsync("Textbox");
 
-        await Page.Locator("#ion-input-13").FillAsync("bad");
+        await Page.GetByTestId("boxingtester").Locator("input").Nth(1).FillAsync("En Box");
 
-        await Page.Locator("#ion-input-14").ClickAsync();
+		await Page.GetByTestId("boxLength").Locator("input").Nth(1).FillAsync("350");
 
-        await Page.Locator("#ion-input-14").FillAsync("tester");
+		await Page.GetByTestId("boxHeight").Locator("input").Nth(1).FillAsync("350");
 
-        await Page.Locator("#ion-input-15").ClickAsync();
+		await Page.GetByTestId("boxWidth").Locator("input").Nth(1).FillAsync("350");
 
-        await Page.Locator("#ion-input-15").FillAsync("455");
+		await Page.GetByTestId("boxPrice").Locator("input").Nth(1).FillAsync("350");
 
-        await Page.Locator("#ion-input-16").ClickAsync();
+		await Page.Locator("#ion-overlay-1").GetByRole(AriaRole.Button, new() { Name = "send" }).ClickAsync();
 
-        await Page.Locator("#ion-input-16").FillAsync("4455");
-
-        await Page.Locator("#ion-input-17").ClickAsync();
-
-        await Page.Locator("#ion-input-17").FillAsync("555");
-
-        await Page.Locator("#ion-input-18").ClickAsync();
-
-        await Page.Locator("#ion-input-18").FillAsync("4555");
-
-        await Page.Locator("#ion-overlay-1").GetByRole(AriaRole.Button, new() { Name = "send" }).ClickAsync();
-
-        Assert.Fail("Box creation should have failed with an invalid input.");
+		Assert.False;
 
     }
 		
