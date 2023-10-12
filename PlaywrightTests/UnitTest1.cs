@@ -33,8 +33,18 @@ public class Tests : PageTest
 
 		await Page.Locator("#ion-overlay-1").GetByRole(AriaRole.Button, new() { Name = "send" }).ClickAsync();
 		
+		await Task.Delay(10000);
+		
 		await Page.ReloadAsync();
- 	 }
+		
+		var targetCardText = "TestLength: 220 mm - Width: 220 mm - Height: 222 mmPrice: 220 kr.In storage: Add";
+        
+		var cardSelector = $"ion-card:has-text(\"{targetCardText}\")";
+
+		await Page.WaitForSelectorAsync(cardSelector);
+
+
+     }
 	
 	[Test, Order(2)]
     public async Task pwUpdateBox()
@@ -50,9 +60,6 @@ public class Tests : PageTest
         await Page.Locator("#ion-overlay-1").GetByRole(AriaRole.Button, new() { Name = "Update" }).ClickAsync();
 
 		await Page.ReloadAsync();
-		
-	
-
     }
 
 
@@ -65,10 +72,7 @@ public class Tests : PageTest
         await Page.Locator("ion-card").Filter(new() { HasText = "TestLength: 220 mm - Width: 220 mm - Height: 2222 mmPrice: 220 kr.In storage: Add" }).GetByTestId("boxDeleter").GetByRole(AriaRole.Img).ClickAsync();
 
     }
-
-
-
-
+    
 
  /*   [Test]
     public async Task addToStorage()
