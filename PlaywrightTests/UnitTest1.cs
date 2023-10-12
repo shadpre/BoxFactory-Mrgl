@@ -50,6 +50,8 @@ public class Tests : PageTest
         await Page.Locator("#ion-overlay-1").GetByRole(AriaRole.Button, new() { Name = "Update" }).ClickAsync();
 
 		await Page.ReloadAsync();
+		
+	
 
     }
 
