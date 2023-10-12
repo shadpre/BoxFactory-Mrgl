@@ -48,7 +48,7 @@ console.log(this.state.editBox)
     try {
       const boxId = this.state.editBox.boxId; // Get the ID of the box to update
       const observable = this.http.put<ResponseDto<Box>>(
-        environment.baseUrl + '/api/box/'+ boxId, this.updateBoxForm.getRawValue()
+        environment.baseUrl + '/api/box', {...this.updateBoxForm.getRawValue(), boxId: this.state.editBox.boxId}
       );
 
       const response = await firstValueFrom(observable);
