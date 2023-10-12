@@ -8,28 +8,85 @@ namespace PlaywrightTests;
 
 [Parallelizable(ParallelScope.Self)]
 [TestFixture]
+
 public class Tests : PageTest
 {
-    [Test]
-    public async Task HomepageHasPlaywrightInTitleAndGetStartedLinkLinkingtoTheIntroPage()
+  
+	[Test]
+    public async Task BoxCreationValid()
+     {
+        await Page.GotoAsync("http://localhost:4200/");
+
+        await Page.Locator("ion-fab-button").GetByRole(AriaRole.Img).Nth(1).ClickAsync();
+
+        await Page.GetByTestId("boxName").Locator("input").Nth(1).FillAsync("Textbox");
+
+        await Page.GetByTestId("boxingtester").Locator("input").Nth(1).FillAsync("En Box");
+
+		await Page.GetByTestId("boxLength").Locator("input").Nth(1).FillAsync("350");
+
+		await Page.GetByTestId("boxHeight").Locator("input").Nth(1).FillAsync("350");
+
+		await Page.GetByTestId("boxWidth").Locator("input").Nth(1).FillAsync("350");
+
+		await Page.GetByTestId("boxPrice").Locator("input").Nth(1).FillAsync("350");
+
+		await Page.Locator("#ion-overlay-1").GetByRole(AriaRole.Button, new() { Name = "send" }).ClickAsync();
+
+ 	 }
+*/
+
+[Test]
+   public async Task pwDelete()
     {
-        await Page.GotoAsync("https://playwright.dev");
+        await Page.GotoAsync("http://localhost:4200/");
 
-        // Expect a title "to contain" a substring.
-        await Expect(Page).ToHaveTitleAsync(new Regex("Playwright"));
+        await Page.GetByTestId("boxDeleter").Nth(1).ClickAsync();
 
-        // create a locator
-        var getStarted = Page.GetByRole(AriaRole.Link, new() { Name = "Get started" });
+	}
 
-        // Expect an attribute "to be strictly equal" to the value.
-        await Expect(getStarted).ToHaveAttributeAsync("href", "/docs/intro");
 
-        // Click the get started link.
-        await getStarted.ClickAsync();
 
-        // Expects the URL to contain intro.
-        await Expect(Page).ToHaveURLAsync(new Regex(".*intro"));
+    [Test]
+    public async Task addToStorage()
+    {
+        await Page.GotoAsync("http://localhost:4200/");
+
+        await Page.Locator("#ion-input-6").ClickAsync();
+
+        await Page.Locator("#ion-input-6").FillAsync("5");
+
+        await Page.Locator("ion-card").Filter(new() { HasText = "string, a boxLength: 2000 mm - Width: 3000 mm - Height: 2000 mmPrice: 25 kr.In s" }).GetByRole(AriaRole.Button).First.ClickAsync();
+
     }
+
+}
+	
+/*	[Test]
+		 public async Task BoxCreationInvalid()
+  		  {
+           await Page.GotoAsync("http://localhost:4200/");
+
+        await Page.Locator("ion-fab-button").GetByRole(AriaRole.Img).Nth(1).ClickAsync();
+
+        await Page.GetByTestId("boxName").Locator("input").Nth(1).FillAsync("Textbox");
+
+        await Page.GetByTestId("boxingtester").Locator("input").Nth(1).FillAsync("En Box");
+
+		await Page.GetByTestId("boxLength").Locator("input").Nth(1).FillAsync("350");
+
+		await Page.GetByTestId("boxHeight").Locator("input").Nth(1).FillAsync("350");
+
+		await Page.GetByTestId("boxWidth").Locator("input").Nth(1).FillAsync("350");
+
+		await Page.GetByTestId("boxPrice").Locator("input").Nth(1).FillAsync("350");
+
+		await Page.Locator("#ion-overlay-1").GetByRole(AriaRole.Button, new() { Name = "send" }).ClickAsync();
+
+		Assert.False;
+
+    }
+		
 }
 
 /*

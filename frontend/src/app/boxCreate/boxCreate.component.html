@@ -1,39 +1,46 @@
 <ion-content>
 <ion-list>
   <ion-item>
-    <ion-input [formControl]="createNewBoxForm.controls.boxName" label="insert a name for the box please">
+    <ion-input data-testid="boxName" [formControl]="createNewBoxForm.controls.boxName" label="insert a name for the box please">
 
     </ion-input>
     <div *ngIf="!createNewBoxForm.controls.boxName.valid">The box name must be 4 chars or more</div>
   </ion-item>
   <ion-item>
-    <ion-input [formControl]="createNewBoxForm.controls.description" label="please add a description">
+    <ion-input data-testid="boxingtester"  [formControl]="createNewBoxForm.controls.description" label="please add a description">
 
     </ion-input>
   </ion-item>
   <ion-item>
-    <ion-input type="number" [formControl]="createNewBoxForm.controls.length" label="please insert the length of the box">
+<
+    <ion-input data-testid="boxLength" [formControl]="createNewBoxForm.controls.length" label="please insert the length of the box" id="boxLengthInput">
+
 
     </ion-input>
   </ion-item>
   <ion-item>
-    <ion-input type="number"  [formControl]="createNewBoxForm.controls.width"  label="please insert the width of the box">
+
+    <ion-input data-testid="boxWidth"  [formControl]="createNewBoxForm.controls.width"  label="please insert the width of the box" id="boxWidthInput">
+
 
     </ion-input>
   </ion-item>
   <ion-item>
-    <ion-input  type="number" [formControl]="createNewBoxForm.controls.height"  label="please insert the height of the box">
+
+    <ion-input data-testid="boxHeight"  [formControl]="createNewBoxForm.controls.height"  label="please insert the height of the box" id="boxHeightInput">
+
 
     </ion-input>
   </ion-item>
   <ion-item>
-    <ion-input  type="number" [formControl]="createNewBoxForm.controls.price"  label="please add a price">
+
+    <ion-input data-testid="boxPrice" [formControl]="createNewBoxForm.controls.price"  label="please add a price" id="boxPriceInput">
 
     </ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-button [disabled]="createNewBoxForm.invalid" (click)="submit()">send</ion-button>
+    <ion-button [disabled]="createNewBoxForm.invalid" (click)="submit()" id="boxCreate">send</ion-button>
     <ion-button (click)="cancel()">cancel</ion-button>
   </ion-item>
 </ion-list>
