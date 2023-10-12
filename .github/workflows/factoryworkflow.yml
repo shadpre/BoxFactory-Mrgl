@@ -36,6 +36,11 @@ jobs:
         run: cd PlaywrightTests && sleep 60 && dotnet test
         env:
           myDb1: ${{secrets.MYDB1}}
+          
+      - name: Run tests once API is running (sleep interval set to 60 seconds)
+        run: cd PlaywrightTests && sleep 60 && dotnet test
+        env:
+          myDb1: ${{secrets.MYDB1}}    
 
       - name: Shutdown Web API once the tests are done running
         run: kill $API_PID
