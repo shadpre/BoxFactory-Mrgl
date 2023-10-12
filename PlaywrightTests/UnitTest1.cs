@@ -11,6 +11,8 @@ namespace PlaywrightTests;
 
 public class Tests : PageTest
 {
+	
+	const video = await page.video.startRecording();
   
 	[Test, Order(1)]
     public async Task pwCreateBox()
@@ -72,6 +74,8 @@ public class Tests : PageTest
         await Page.Locator("ion-card").Filter(new() { HasText = "TestLength: 220 mm - Width: 220 mm - Height: 2222 mmPrice: 220 kr.In storage: Add" }).GetByTestId("boxDeleter").GetByRole(AriaRole.Img).ClickAsync();
 
     }
+    
+    await video.stop();
     
 
  /*   [Test]
