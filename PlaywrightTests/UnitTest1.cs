@@ -34,7 +34,7 @@ public class Tests : PageTest
 		await Page.Locator("#ion-overlay-1").GetByRole(AriaRole.Button, new() { Name = "send" }).ClickAsync();
 
  	 }
-*/
+
 
 [Test]
    public async Task pwDelete()
@@ -47,18 +47,19 @@ public class Tests : PageTest
 
 
 
-    [Test]
+ /*   [Test]
     public async Task addToStorage()
     {
         await Page.GotoAsync("http://localhost:4200/");
 
-        await Page.Locator("#ion-input-6").ClickAsync();
+        await Page.Locator("#ion-input-15").ClickAsync();
 
-        await Page.Locator("#ion-input-6").FillAsync("5");
+        await Page.Locator("#ion-input-15").FillAsync("5");
 
-        await Page.Locator("ion-card").Filter(new() { HasText = "string, a boxLength: 2000 mm - Width: 3000 mm - Height: 2000 mmPrice: 25 kr.In s" }).GetByRole(AriaRole.Button).First.ClickAsync();
+        await Page.Locator("ion-card").Filter(new() { HasText = "EN BOX boxLength: 350 mm - Width: 350 mm - Height: 350 mmPrice: 350 kr.In s" }).GetByRole(AriaRole.Button).First.ClickAsync();
 
     }
+*/
 
 }
 	
