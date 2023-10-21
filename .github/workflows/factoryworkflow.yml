@@ -23,19 +23,20 @@ jobs:
         run: cd PlaywrightTests && dotnet build && pwsh bin/Debug/net8.0/playwright.ps1 install --with-deps
 
       - name: Build and run Web API + getting process ID for shutting down later
+        with:
+          myDb1: ${{ secrets.MYDB2 }}
         run: cd api && dotnet run & echo "API_PID=$!" >> $GITHUB_ENV
-        with:
-          myDb1: ${{ secrets.MYDB2 }}
-      
+              
       - name: Build and run Frontend Angular + getting process ID for shutting down later
+        with:
+          myDb1: ${{ secrets.MYDB2 }}
         run: cd frontend && ng serve --open & echo "API_PID=$!" >> $GITHUB_ENV
-        with:
-          myDb1: ${{ secrets.MYDB2 }}
-       
+               
       - name: Run tests once API is running (sleep interval set to 60 seconds)
-        run: cd PlaywrightTests && sleep 60 && dotnet test
         with:
           myDb1: ${{ secrets.MYDB2 }}
+        run: cd PlaywrightTests && sleep 60 && dotnet test
+        
 
       - name: Shutdown Web API once the tests are done running
         run: kill $API_PID
