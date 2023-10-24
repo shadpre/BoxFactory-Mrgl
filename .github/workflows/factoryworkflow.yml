@@ -1,45 +1,70 @@
+name: Run Playwright Tests
+
 on:
   push:
     branches:
       - main
       - master
   workflow_dispatch:
+
 jobs:
   playwrighttests:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-dotnet@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 8.0.x
-      - uses: actions/setup-node@v3
+          dotnet-version: 8.0 # Update to the appropriate version
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
-          node-version: 18.x.x
+          node-version: 18 # Update to the appropriate version
 
-      - name: Install Angular program dependencies, Angular global CLI + ng build
-        run: cd frontend && npm i -g @angular/cli && npm i && ng build -c="development"
+      - name: Install Angular program dependencies and build
+        run: |
+          cd frontend
+          npm install -g @angular/cli
+          npm install
+          ng build --configuration=development
 
-      - name: Build test code and install playwright test browser
-        run: cd PlaywrightTests && dotnet build && pwsh bin/Debug/net8.0/playwright.ps1 install --with-deps
+      - name: Build test code and install Playwright
+        run: |
+          cd PlaywrightTests
+          dotnet build
+          dotnet tool install --global Microsoft.Playwright.CLI
+          playwright install
 
-      - name: Build and run Web API + getting process ID for shutting down later
-        run: cd api && dotnet run & echo "API_PID=$!" >> $GITHUB_ENV
-        env:
-          myDb1: ${{ secrets.MYDB3 }}  
-          
-      - name: Build and run Frontend Angular + getting process ID for shutting down later
-        run: cd frontend && ng serve --open & echo "API_PID=$!" >> $GITHUB_ENV
-        env:
-          myDb1: ${{ secrets.MYDB3 }}  
-               
-      - name: Run tests once API is running (sleep interval set to 60 seconds)
-        run: cd PlaywrightTests && sleep 60 && dotnet test
+      - name: Build and run Web API + get process ID
+        run: |
+          cd api
+          dotnet run &
+          echo "API_PID=$!" >> $GITHUB_ENV
         env:
           myDb1: ${{ secrets.MYDB3 }}
-        
+
+      - name: Build and run Frontend Angular + get process ID
+        run: |
+          cd frontend
+          ng serve --open &
+          echo "FRONTEND_PID=$!" >> $GITHUB_ENV
+        env:
+          myDb1: ${{ secrets.MYDB3 }}
+
+      - name: Run tests once API is running (sleep interval set to 60 seconds)
+        run: |
+          cd PlaywrightTests
+          Start-Sleep -s 60
+          dotnet test
+        env:
+          myDb1: ${{ secrets.MYDB3 }}
 
       - name: Shutdown Web API once the tests are done running
-        run: kill $API_PID
-          
-          
+        run: |
+          Stop-Process -Id $env:API_PID
+ 
 
