@@ -18,7 +18,7 @@ public class Tests : PageTest
   
   		await Page.GotoAsync("http://localhost:4200/");
 
-        await Page.Locator("ion-fab-button").GetByRole("button").Nth(1).ClickAsync();
+        await Page.Locator("ion-fab-button").GetByRole(AriaRole.Img).Nth(1).ClickAsync();
 
         await Page.GetByTestId("boxName").Locator("input").Nth(1).FillAsync("Test");
 
@@ -34,7 +34,7 @@ public class Tests : PageTest
 
 		await Page.Locator("#ion-overlay-1").GetByRole(AriaRole.Button, new() { Name = "send" }).ClickAsync();
 		
-		await Task.Delay(10000);
+		//await Task.Delay(10000);
 		
 		await Page.ReloadAsync();
 		
