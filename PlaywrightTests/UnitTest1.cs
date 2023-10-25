@@ -12,48 +12,13 @@ namespace PlaywrightTests;
 public class Tests : PageTest
 {
   
-	
-
-
-
-
 	[Test, Order(1)]
     public async Task pwCreateBox()
      {
   
-        await Page.GotoAsync("http://localhost:4200/");
+  		await Page.GotoAsync("http://localhost:4200/");
 
-        await Page.Locator("ion-fab-button path").Nth(1).ClickAsync();
-
-        await Page.Locator("boxName").ClickAsync();
-
-        await Page.Locator("boxName").FillAsync("Lækker Kasse");
-
-        await Page.Locator("boxingtester").ClickAsync();
-
-        await Page.Locator("boxingtester").FillAsync("Den er Fin");
-
-        await Page.Locator("boxLength").ClickAsync();
-
-        await Page.Locator("boxLength").FillAsync("250");
-
-        await Page.Locator("boxWidth").ClickAsync();
-
-        await Page.Locator("boxWidth").FillAsync("350");
-
-        await Page.Locator("boxHeight").ClickAsync();
-
-        await Page.Locator("boxHeight").FillAsync("450");
-
-        await Page.Locator("boxPrice").ClickAsync();
-
-        await Page.Locator("boxPrice").FillAsync("15");
-
-        await Page.Locator("boxCreate").GetByRole(AriaRole.Button, new() { Name = "send" }).ClickAsync();
-
-		/* await Page.GotoAsync("http://localhost:4200/");
-
-        await Page.Locator("ion-fab-button").GetByRole(AriaRole.Img).Nth(1).ClickAsync();
+        await Page.Locator("ion-fab-button").GetByRole("button").Nth(1).ClickAsync();
 
         await Page.GetByTestId("boxName").Locator("input").Nth(1).FillAsync("Test");
 
@@ -79,7 +44,7 @@ public class Tests : PageTest
 
 		await Page.WaitForSelectorAsync(cardSelector);
 
-*/
+
      }
 	
 	[Test, Order(2)]
