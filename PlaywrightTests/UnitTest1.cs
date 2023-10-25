@@ -15,7 +15,40 @@ public class Tests : PageTest
 	[Test, Order(1)]
     public async Task pwCreateBox()
      {
+  
         await Page.GotoAsync("http://localhost:4200/");
+
+        await Page.Locator("ion-fab-button path").Nth(1).ClickAsync();
+
+        await Page.Locator("#ion-input-20").ClickAsync();
+
+        await Page.Locator("#ion-input-20").FillAsync("Lækker Kasse");
+
+        await Page.Locator("#ion-input-21").ClickAsync();
+
+        await Page.Locator("#ion-input-21").FillAsync("Den er Fin");
+
+        await Page.Locator("#ion-input-22").ClickAsync();
+
+        await Page.Locator("#ion-input-22").FillAsync("250");
+
+        await Page.Locator("#ion-input-23").ClickAsync();
+
+        await Page.Locator("#ion-input-23").FillAsync("350");
+
+        await Page.Locator("#ion-input-24").ClickAsync();
+
+        await Page.Locator("#ion-input-24").ClickAsync();
+
+        await Page.Locator("#ion-input-24").FillAsync("450");
+
+        await Page.Locator("#ion-input-25").ClickAsync();
+
+        await Page.Locator("#ion-input-25").FillAsync("15");
+
+        await Page.Locator("#ion-overlay-1").GetByRole(AriaRole.Button, new() { Name = "send" }).ClickAsync();
+
+		/* await Page.GotoAsync("http://localhost:4200/");
 
         await Page.Locator("ion-fab-button").GetByRole(AriaRole.Img).Nth(1).ClickAsync();
 
@@ -43,7 +76,7 @@ public class Tests : PageTest
 
 		await Page.WaitForSelectorAsync(cardSelector);
 
-
+*/
      }
 	
 	[Test, Order(2)]
