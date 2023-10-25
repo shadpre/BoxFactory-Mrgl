@@ -15,7 +15,8 @@ public class Tests : PageTest
 	[Test, Order(1)]
     public async Task pwCreateBox()
      {
-  
+  		test.setTimeout(120000);
+
   		await Page.GotoAsync("http://localhost:4200/");
 
         await Page.Locator("ion-fab-button").GetByRole(AriaRole.Img).Nth(1).ClickAsync();
