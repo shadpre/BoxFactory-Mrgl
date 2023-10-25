@@ -12,6 +12,11 @@ namespace PlaywrightTests;
 public class Tests : PageTest
 {
   
+	
+
+
+
+
 	[Test, Order(1)]
     public async Task pwCreateBox()
      {
@@ -20,33 +25,31 @@ public class Tests : PageTest
 
         await Page.Locator("ion-fab-button path").Nth(1).ClickAsync();
 
-        await Page.Locator("#ion-input-20").ClickAsync();
+        await Page.Locator("boxName").ClickAsync();
 
-        await Page.Locator("#ion-input-20").FillAsync("Lækker Kasse");
+        await Page.Locator("boxName").FillAsync("Lækker Kasse");
 
-        await Page.Locator("#ion-input-21").ClickAsync();
+        await Page.Locator("boxingtester").ClickAsync();
 
-        await Page.Locator("#ion-input-21").FillAsync("Den er Fin");
+        await Page.Locator("boxingtester").FillAsync("Den er Fin");
 
-        await Page.Locator("#ion-input-22").ClickAsync();
+        await Page.Locator("boxLength").ClickAsync();
 
-        await Page.Locator("#ion-input-22").FillAsync("250");
+        await Page.Locator("boxLength").FillAsync("250");
 
-        await Page.Locator("#ion-input-23").ClickAsync();
+        await Page.Locator("boxWidth").ClickAsync();
 
-        await Page.Locator("#ion-input-23").FillAsync("350");
+        await Page.Locator("boxWidth").FillAsync("350");
 
-        await Page.Locator("#ion-input-24").ClickAsync();
+        await Page.Locator("boxHeight").ClickAsync();
 
-        await Page.Locator("#ion-input-24").ClickAsync();
+        await Page.Locator("boxHeight").FillAsync("450");
 
-        await Page.Locator("#ion-input-24").FillAsync("450");
+        await Page.Locator("boxPrice").ClickAsync();
 
-        await Page.Locator("#ion-input-25").ClickAsync();
+        await Page.Locator("boxPrice").FillAsync("15");
 
-        await Page.Locator("#ion-input-25").FillAsync("15");
-
-        await Page.Locator("#ion-overlay-1").GetByRole(AriaRole.Button, new() { Name = "send" }).ClickAsync();
+        await Page.Locator("boxCreate").GetByRole(AriaRole.Button, new() { Name = "send" }).ClickAsync();
 
 		/* await Page.GotoAsync("http://localhost:4200/");
 
