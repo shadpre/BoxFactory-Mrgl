@@ -11,7 +11,7 @@ namespace PlaywrightTests;
 
 public class Tests : PageTest
 {
-    [Test, Order(1)]
+/*    [Test, Order(1)]
     public async Task delBox()
     {
 
@@ -23,10 +23,10 @@ public class Tests : PageTest
 
 
     }
-	
+*/	
 
 
-	[Test, Order(2)]
+	[Test, Order(1)]
     public async Task pwCreateBox()
      {
   		//Test.setTimeout(120000);
@@ -62,7 +62,7 @@ public class Tests : PageTest
 
      }
 	
-	[Test, Order(3)]
+	[Test, Order(2)]
     public async Task pwUpdateBox()
     {
         await Page.GotoAsync("http://localhost:4200/");
@@ -80,7 +80,7 @@ public class Tests : PageTest
 
 
 
- /*	[Test, Order(4)]
+ 	[Test, Order(3)]
     public async Task pwDeleteBox()
     {
         await Page.GotoAsync("http://localhost:4200/");
@@ -88,7 +88,7 @@ public class Tests : PageTest
         await Page.Locator("ion-card").Filter(new() { HasText = "TestLength: 220 mm - Width: 220 mm - Height: 2222 mmPrice: 220 kr.In storage: Add" }).GetByTestId("boxDeleter").GetByRole(AriaRole.Img).ClickAsync();
 
     }
-    */
+    
 
  /*   [Test]
     public async Task addToStorage()
