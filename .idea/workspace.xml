@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="236e1403-5798-49e3-9c4b-0f506efb44a4" name="Changes" comment="Update">
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/boxUpdate/boxUpdate.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/boxUpdate/boxUpdate.component.ts" afterDir="false" />
+    <list default="true" id="236e1403-5798-49e3-9c4b-0f506efb44a4" name="Changes" comment="Alex's fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/boxCreate/boxCreate.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/boxCreate/boxCreate.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +73,13 @@
       <workItem from="1696921535957" duration="7690000" />
       <workItem from="1696971078379" duration="7559000" />
       <workItem from="1697006540614" duration="20243000" />
-      <workItem from="1697095331346" duration="7657000" />
+      <workItem from="1697095331346" duration="8696000" />
+      <workItem from="1697309742189" duration="345000" />
+      <workItem from="1698012991927" duration="85000" />
+      <workItem from="1698056993395" duration="100000" />
+      <workItem from="1698249474683" duration="15800000" />
+      <workItem from="1698838524465" duration="303000" />
+      <workItem from="1698839048851" duration="76000" />
     </task>
     <task id="LOCAL-00001" summary="http">
       <option name="closed" value="true" />
@@ -105,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697102693979</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Alex's fix">
+      <option name="closed" value="true" />
+      <created>1697103415372</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697103415372</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +132,7 @@
     <MESSAGE value="api på fro" />
     <MESSAGE value="create" />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="Alex's fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alex's fix" />
   </component>
 </project>
